@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Attendance Table</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />  
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="assets/logo.png" alt="Logo" />
+          <span>ODA FACIAL RECOGNITION</span>
+        </div>
+        <div id="print-button" class="navbar-link" style="display: flex; align-items: center;justify-content: space-between; gap: 10px; background-color: #30A473; padding: 5px; border-radius: 6px; cursor: pointer;">
+          <img src="assets\print.png"  class="printimage" style=" width: 20px;">
+          <a>Print Data</a>
+        </div>
+      </nav>
+    </header>
+    <canvas id="canvas"></canvas>
+    <div class="content">
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th style="border-top-left-radius: 6px;">Name</th>
+              <th style="border-top-right-radius: 6px;">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dr. Abiy Ahimed</td>
+              <td id="abiy-statusz" class="absent">Absent</td>
+            </tr>
+            <tr>
+              <td>Dr. Tola Beriso</td>
+              <td id="tola-statusz" class="absent">Absent</td>
+            </tr>
+            <tr>
+              <td>Prof. Birhanu Nega</td>
+              <td id="birhanu-statusz" class="absent">Absent</td>
+            </tr>
+            <tr>
+              <td>Mr. Shimelis Abdisa</td>
+              <td id="shimelis-statusz" class="absent">Absent</td>
+            </tr>
+            <tr>
+              <td>Mr. Abadula Gemeda</td>
+              <td id="abadula-statusz" class="absent">Absent</td>
+            </tr>
+
+            <tr>
+              <td>Mr. Dejene Eticha</td>
+              <td id="dejene-statusz" class="absent">Absent</td>
+            </tr>
+
+            <tr>
+              <td>Stu. Yosen Girma</td>
+              <td id="yosen-status" class="absent">Absent</td>
+            </tr>
+
+            <tr>
+              <td>Stu. Milki Gebre</td>
+              <td id="nafira-status" class="absent">Absent</td>
+            </tr>
+
+            
+            <tr>
+              <td>Stu. Yisihak Yared</td>
+              <td id="yisihak-status" class="absent">Absent</td>
+            </tr>
+
+            
+            <tr>
+              <td>Stu. Sara Tesfaye</td>
+              <td id="sara-status" class="absent">Absent</td>
+            </tr>
+
+            <tr>
+              <td>Stu. Nafiyad Aman</td>
+              <td id="nafiyad-status" class="absent">Absent</td>
+            </tr>
+
+            <tr>
+              <td>Stu. Gemechis Asefa</td>
+              <td id="gemechis-status" class="absent">Absent</td>
+            </tr> 
+
+            <tr>
+              <td style="border-bottom-left-radius: 6px;">Stu. Moti Bahiru</td>
+              <td id="moti-status" class="absent" style="border-bottom-right-radius: 6px;">Absent</td>
+            </tr>
+
+            
+          </tbody>
+        </table>
+      </div>
+<!-- -------------------------------------------------------------------------------------------------------- -->
+
+      <video id="video" width="700" height="550" autoplay></video>
+      <div class="clock">
+        <img src="assets\profile\clock.png"  class="clockimage">
+        <p id="datetime"></p>
+      </div>
+
+      <div class="camera">
+        <img src="assets\profile\camera.png"  class="cameraimage">
+        <p >Detection in progress...</p>
+      </div>
+     
+
+<!-- -------------------------------------------------------------------------------------------------------- -->
+      <div class="table-container righttable">
+        <table>
+          <thead>
+            <tr>
+              <th style=" border-top-left-radius: 6px;">Name</th>
+              <th style="border-top-right-radius: 6px;">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Stu. Kena Mesfin</td>
+              <td id="kena-status" class="absent">Absent</td>
+            </tr>
+            <tr>
+              <td>Stu. Jalne Megerrsa</td>
+              <td id="lomitu-status" class="absent">Absent</td>
+            </tr>
+            <tr>
+              <td>Stu. Meshiha Bahiru</td>
+              <td id="anan-status" class="absent">Absent</td>
+            </tr>
+            <tr>
+              <td>Stu. Koket Alemayehu</td>
+              <td id="koket-status" class="absent">Absent</td>
+            </tr>
+            <tr>
+              <td>Stu. Zebiba Usheta</td>
+              <td id="zebiba-status" class="absent">Absent</td>
+            </tr>
+
+            <tr>
+              <td>Stu. Berite Ahimed</td>
+              <td id="berite-status" class="absent">Absent</td>
+            </tr>
+
+            <tr>
+              <td>Stu. Duguma Firomsa</td>
+              <td id="duguma-status" class="absent">Absent</td>
+            </tr>
+
+            <tr>
+              <td>Stu. Roba Tamirat</td>
+              <td id="roba-status" class="absent">Absent</td>
+            </tr>
+
+            
+            <tr>
+              <td>Stu. Abdi Kumsa</td>
+              <td id="abdi-status" class="absent">Absent</td>
+            </tr>
+
+            
+            <tr>
+              <td>Stu. Raya Ulfina</td>
+              <td id="raya-status" class="absent">Absent</td>
+            </tr>
+
+            <tr>
+              <td>Stu. MekonIN Mulugeta</td>
+              <td id="rahel-status" class="absent">Absent</td>
+            </tr>
+
+            <tr>
+              <td>Stu. Fesson Messele</td>
+              <td id="feson-status" class="absent">Absent</td>
+            </tr> 
+
+            <tr>
+              <td style="border-bottom-left-radius: 6px;">Stu. Elias Lemesa</td>
+              <td id="elias-status" class="absent" style="border-bottom-right-radius: 6px;">Absent</td>
+            </tr>
+
+            
+          </tbody>
+        </table>
+      </div>
+
+      <div id="namesContainer"></div>
+
+    </div>
+
+
+    
+    <script defer src="face-api.min.js"></script>
+    <script defer src="script.js"></script>
+  </body>
+</html>

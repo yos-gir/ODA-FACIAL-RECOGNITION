@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #082144;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  left: 27rem;
+  top: 8rem;
+}
+
+#video {
+  border: 20px solid #10376D;
+  border-radius: 6px;
+  margin-right: 3rem;
+  /* width: 754px;
+  height: 480px; */
+}
+
+header {
+  background-color: #10376d;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1350px;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-link a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  justify-content:space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+
+}
+
+.table-container {
+  width: 50%;
+  margin-right: 43px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #ccc;
+}
+
+.present {
+  background-color: green;
+  color: white;
+}
+
+.absent {
+  background-color: red;
+  color: white;
+}
+
+th {
+  background-color: #10376D;
+  color: white;
+}
+
+td {
+  background-color: white;
+  color: black;
+  text-align: left;
+  height: 30px;
+}
+td.absent{
+  text-align: center;
+}
+
+td.present{
+  text-align: center;
+}
+
+
+
+
+table {
+  border-collapse: collapse;
+  width: 272px;
+}
+
+.clock{
+
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  bottom: 120px;
+  right: 420px;
+  background: #10376D;
+  padding: 5px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.clock .clockimage {
+  width: 30px;
+}
+
+
+.camera{
+
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  bottom: 120px;
+  right: 846px;
+  background: #10376D;
+  padding: 5px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.camera .cameraimage {
+  width: 30px;
+}
+
+td{
+  width:max-content;
+}
